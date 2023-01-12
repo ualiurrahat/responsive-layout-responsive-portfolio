@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Responsive Website</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .box {
+        height: 200px;
+        /* width: 200px; */
+        /* width: 100%; */
+        width: 200px;
+        /* width: 700px; box can not have this width untill we set flex-wrap:wrap. browser sets a width possible,as it goes beyond viewport width.
+        so we need to wrap the flex */
+        background-color: aqua;
+        font-size: 1.5em;
+        /* border: 1px solid red; */
+    }
+
+    /* media queria for responsive layout  */
+
+    /* for small device  */
+    @media screen and (max-width:576px) {
+        .container {
+            flex-direction: column;
+        }
+    }
+
+    /* for medium device  */
+    @media screen and (min-width: 577px) and (max-width:800px) {
+        .box {
+            background-color: lightcoral;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box">box-1</div>
+        <div class="box">box-2</div>
+        <div class="box">box-3</div>
+        <div class="box">box-4</div>
+    </div>
+</body>
+
+</html>
